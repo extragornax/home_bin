@@ -1,6 +1,19 @@
 #!/bin/sh
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get autoclean
-sudo apt-get autoremove
+which pacman &> /dev/null && os="archlinux"
+which apt-get &> /dev/null && os="debian"
+
+if test "$os" = "debian"; then
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get autoclean
+    sudo apt-get autoremove
+fi
+
+if test "$os" = "archlinux"; then
+    yaourt -Syua
+fi
+
+if test "$os" = "void"; then
+    echo "VOTRE DISTRIBUTION N'EST PAS SUPPORT"
+fi
