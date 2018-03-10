@@ -131,7 +131,7 @@ class norme:
                         else:
                                 if self.nb_func >= 1 and self.is_func:
                                         self.nb_funcline = self.nb_funcline + 1
-                                        if self.nb_funcline >= 26:
+                                        if self.nb_funcline >= 21:
                                                 self.note += 1
                                                 self.print_error('fonction de plus de 25 lignes')
 
