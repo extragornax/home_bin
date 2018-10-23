@@ -1,1 +1,0 @@
-sudo docker run --privileged=true --cap-add="SYS_PTRACE" --security-opt="apparmor:unconfined"  -v `pwd`:/repo -v ~/.ssh:/root/.ssh -ti 41;285;0cepitechcontent/epitest-docker /bin/bash
